@@ -1,7 +1,22 @@
 import styled from "styled-components";
 
+export const SubTotal = styled.h2`
+  text-align: center;
+  padding: 20px;
+`;
+
+export const Container = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 40px;
+  gap: 20px;
+  min-height: calc(100vh - 405px);
+`;
+
 export const CardProduct = styled.div`
-  width: 340px;
+  width: 240px;
   height: 300px;
   background-color: #fff;
   box-shadow: 2px 4px 12px rgb(0 0 0 / 19%);
@@ -20,7 +35,7 @@ export const CardProduct = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 120px;
+  width: 100px;
 `;
 
 export const ProductTitle = styled.p`
@@ -35,7 +50,6 @@ export const Price = styled.span`
   font-weight: 700;
   line-height: 20px;
   color: #00d864;
-  margin-bottom: 20px;
 `;
 
 export const Button = styled.button`
@@ -58,8 +72,4 @@ export const Button = styled.button`
     align-items: center;
     justify-content: center;
   }
-`;
-
-export const CartIcon = styled.span`
-  font-size: 20px;
 `;
