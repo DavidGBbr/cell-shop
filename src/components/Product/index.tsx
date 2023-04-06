@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ProductInterface } from "../../types/ProductInterface";
 import { BsFillCartCheckFill, BsFillCartPlusFill } from "react-icons/bs";
-import { Context } from "../../Contexts/Context";
+import { Context, ItemType } from "../../Contexts/Context";
 import * as C from "./styles";
 
 export const Product = (dataProduct: ProductInterface) => {
@@ -17,7 +17,7 @@ export const Product = (dataProduct: ProductInterface) => {
           currency: "BRL",
         })}
       </C.Price>
-      <C.Button onClick={() => handleClick(dataProduct)}>
+      <C.Button onClick={() => handleClick(dataProduct as ItemType)}>
         {cart.some((itemCart) => itemCart.id === dataProduct.id) ? (
           <div>
             <span>Remover do carrinho</span>

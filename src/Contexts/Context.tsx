@@ -5,7 +5,7 @@ import React, {
   SetStateAction,
 } from "react";
 
-type ItemType = {
+export type ItemType = {
   id: number;
   name: string;
   price: number;
@@ -15,22 +15,31 @@ type ContextType = {
   cart: ItemType[];
   setCart: Dispatch<SetStateAction<ItemType[]>>;
   handleClick: (obj: ItemType) => void;
+  setItem: (key: string, value: any) => void;
+  getItem: (key: string) => any;
 };
 
 const initialState: ContextType = {
   cart: [],
   setCart: () => {},
   handleClick: () => {},
+  setItem: () => {},
+  getItem: () => {},
 };
 
 export const Context = createContext<ContextType>(initialState);
 
-export const ContextProvider: React.FC = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+export const ContextProvider: React.FC<Props> = ({ children }) => {
   const setItem = (key: string, value: any): void => {
     localStorage.setItem(key, JSON.stringify(value));
   };
   const getItem = (key: string): any => {
-    return JSON.parse(localStorage.getItem(key));
+    const item = localStorage.getItem(key);
+    return item ? JSON.parse(item) : "";
   };
   const [cart, setCart] = useState<ItemType[]>(getItem("phones") || []);
 
