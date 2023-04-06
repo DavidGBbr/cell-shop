@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../../Contexts/Context";
 import { ProductInterface } from "../../types/ProductInterface";
-
 import { BsFillCartDashFill } from "react-icons/bs";
 
 export const Cart = () => {
