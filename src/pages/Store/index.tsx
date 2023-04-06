@@ -3,6 +3,7 @@ import { Product } from "../../components/Product";
 import { ProductInterface } from "../../types/ProductInterface";
 import { Context } from "../../Contexts/Context";
 import { Link } from "react-router-dom";
+import { ContainerProducts } from "./styles";
 
 export const Store = () => {
   const { cart, setCart } = useContext(Context);
@@ -19,9 +20,7 @@ export const Store = () => {
   };
 
   return (
-    <>
-      <h1>Store</h1>
-      <Link to="/cart">Carrinho</Link>
+    <ContainerProducts>
       {products.length &&
         products.map((product) => (
           <Product
@@ -32,6 +31,6 @@ export const Store = () => {
             price={product.price}
           />
         ))}
-    </>
+    </ContainerProducts>
   );
 };
