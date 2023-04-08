@@ -8,7 +8,7 @@ export const Cart = () => {
   const { getItem, setItem, setCart } = useContext(Context);
   const [data, setData] = useState<ProductInterface[]>(getItem("phones") || []);
 
-  const removeItem = (obj) => {
+  const removeItem = (obj: any) => {
     const arrFiltered = data.filter((e) => e.id !== obj.id);
     setData(arrFiltered);
     setItem("phones", arrFiltered);

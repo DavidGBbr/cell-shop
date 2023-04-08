@@ -6,8 +6,8 @@ import React, {
 } from "react";
 
 export type ItemType = {
-  id: number;
-  name: string;
+  id: number | string;
+  name?: string;
   price: number;
 };
 
