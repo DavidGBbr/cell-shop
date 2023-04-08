@@ -34,7 +34,7 @@ export const Header = () => {
         <nav>
           <C.HeaderItems>
             <Link to="/">
-              <C.IconItem>
+              <C.IconItem className="hide-mobile">
                 <FaHeart />
               </C.IconItem>
             </Link>
@@ -44,7 +44,7 @@ export const Header = () => {
               </C.IconItem>
             </Link>
             <Link to="/">
-              <C.IconItem>
+              <C.IconItem className="hide-mobile">
                 <FaBell />
               </C.IconItem>
             </Link>

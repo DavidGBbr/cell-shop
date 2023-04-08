@@ -27,6 +27,11 @@ export const HeaderIcon = styled.span`
 
 export const HeaderSearch = styled.div`
   display: flex;
+  @media (max-width: 650px) {
+    & {
+      display: none;
+    }
+  }
 `;
 
 export const Input = styled.input`
@@ -65,4 +70,10 @@ export const IconItem = styled.span`
   color: #fff;
   font-size: 26px;
   cursor: pointer;
+
+  @media (max-width: 650px) {
+    &.hide-mobile {
+      display: none;
+    }
+  }
 `;
