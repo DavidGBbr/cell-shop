@@ -17,7 +17,7 @@ export const Product = (dataProduct: ProductInterface) => {
           currency: "BRL",
         })}
       </C.Price>
-      {/* <C.Button onClick={() => handleClick(dataProduct)}>
+      <C.Button onClick={() => handleClick(dataProduct)}>
         {cart.some((itemCart) => itemCart.id === dataProduct.id) ? (
           <div>
             <span>Remover do carrinho</span>
@@ -33,7 +33,7 @@ export const Product = (dataProduct: ProductInterface) => {
             </C.CartIcon>
           </div>
         )}
-      </C.Button> */}
+      </C.Button>
     </C.CardProduct>
   );
 };
